@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/modify_comment"
+        android:icon="@drawable/edit1"
+        android:title="Modify Comment"
+        >
+
+    </item>
+
+    <item
+        android:id="@+id/delete_comment"
+        android:icon="@drawable/delete1"
+        android:title="Delete Comment"
+        >
+
+    </item>
+</menu>

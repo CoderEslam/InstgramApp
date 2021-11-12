@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "312340077448",
+    "project_id": "instant-gram-e71c1",
+    "storage_bucket": "instant-gram-e71c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312340077448:android:fe1d16651b9951278bb83d",
+        "android_client_info": {
+          "package_name": "com.doubleclick.instant_gram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312340077448-r1upiulqlngdlj29ujv0u8uk68jtm5l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZs-Fs5uvClRJROXSLvhl59VSOywKRFlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312340077448-r1upiulqlngdlj29ujv0u8uk68jtm5l0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

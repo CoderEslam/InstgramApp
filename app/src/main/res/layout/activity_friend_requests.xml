@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendRequestsActivity">
+
+    <include
+        android:id="@+id/friend_requests_toolbar"
+        layout="@layout/toolbar_account">
+
+    </include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/all_user_display_layout"
+        android:id="@+id/friend_requests"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/friend_requests_toolbar">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

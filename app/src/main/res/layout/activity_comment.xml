@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity"
+    android:background="@android:color/white"
+    >
+
+    <include
+        android:id="@+id/toolbar_comment"
+        layout="@layout/toolbar_account"
+        >
+    </include>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/comment_layout"
+        android:layout_margin="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="center"
+                android:background="@drawable/profile"
+                android:id="@+id/comment_photo"
+                android:layout_marginStart="5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <EditText
+                android:id="@+id/write_comment"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:background="@android:color/white"
+                android:hint="Write your Comment"
+                android:maxLength="100"
+                android:maxLines="6"
+                android:textSize="13sp"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:id="@+id/postcomment"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="center"
+                android:background="@android:color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_check"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/all_comments_layout"
+        android:id="@+id/show_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/comment_layout"
+        android:layout_below="@+id/toolbar_comment"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="0dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
