@@ -501,14 +501,12 @@ public class MainActivity extends AppCompatActivity {
     private void DisplayAllUsersPost() {
 
         //QUERY FOR FIREBASE RECYCLER ADAPTER....
-        FirebaseRecyclerOptions<Posts> options =
-                new FirebaseRecyclerOptions.Builder<Posts>()
+        FirebaseRecyclerOptions<Posts> options = new FirebaseRecyclerOptions.Builder<Posts>()
                         .setQuery(PostRef.orderByChild("timestamp"), Posts.class)
                         .build();
 
         //INITIALISING FIREBASE RECYCLER VIEW...
-        firebaseRecyclerAdapter
-                = new FirebaseRecyclerAdapter<Posts, PostViewHolder>(options) {
+        firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Posts, PostViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull final PostViewHolder holder, int position, @NonNull final Posts model) {
 
