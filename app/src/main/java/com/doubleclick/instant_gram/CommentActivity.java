@@ -155,12 +155,9 @@ public class CommentActivity extends AppCompatActivity {
                     @NonNull
                     @Override
                     public CommentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
                         // Create a new instance of the ViewHolder, in this case we are using a custom
                         // layout called R.layout.message for each item
-
-                        View view = LayoutInflater.from(parent.getContext())
-                                .inflate(R.layout.all_comments_layout, parent, false);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.all_comments_layout, parent, false);
                         return new CommentViewHolder(view);
                     }
 
@@ -212,7 +209,6 @@ public class CommentActivity extends AppCompatActivity {
 
     private void showCommentPopup(View v, String postKey) {
         //Referencing Comments
-
         //Log.d("Message",postKey+"         "+PostKey);
         final DatabaseReference CommentRef = FirebaseDatabase.getInstance().getReference().child("Posts").child(PostKey).child("Comments").child(postKey);
 
@@ -393,12 +389,9 @@ public class CommentActivity extends AppCompatActivity {
     //Class Holder for RecyclerView...............
     public static class CommentViewHolder extends RecyclerView.ViewHolder {
         View mView;
-
-
         public CommentViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
-
         }
 
         public void setusername(String username){
@@ -429,16 +422,6 @@ public class CommentActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
-
-
-
-
-
-
     private void ValidateComment(String userName,String profileImage) {
         String commentText = WriteComment.getText().toString();
         if(TextUtils.isEmpty(commentText))
@@ -448,16 +431,12 @@ public class CommentActivity extends AppCompatActivity {
         else
         {
             Calendar calForDAte =Calendar.getInstance();
-
             Long tsLong = System.currentTimeMillis()/1000;
             final String ts = tsLong.toString();
-
             SimpleDateFormat currentDate = new SimpleDateFormat("dd-MMMM-yyyy");
             final String CurrentDate = currentDate.format(calForDAte.getTime());
-
             SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm");
             final String CurrentTime = currentTime.format(calForDAte.getTime());
-
             final String RandomKey = CurrentUserId+CurrentDate+CurrentTime;
 
             //Making data for node to store in firebase.....
