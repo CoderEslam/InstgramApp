@@ -188,8 +188,8 @@ public class CommentActivity extends AppCompatActivity {
                         //hiding the edit bar in initial time.
                         CommentEdit.setVisibility(View.GONE);
 
-                        Log.d("Message",getRef(position).getKey()+"    "+CurrentUserId);
-                        if(getRef(position).getKey().substring(0,28).equals(CurrentUserId))
+                        Log.d("Message",getRef(holder.getAdapterPosition()).getKey()+"    "+CurrentUserId);
+                        if(getRef(holder.getAdapterPosition()).getKey().substring(0,28).equals(CurrentUserId))
                         {
                             CommentEdit.setVisibility(View.VISIBLE);
                         }
@@ -197,7 +197,7 @@ public class CommentActivity extends AppCompatActivity {
                         CommentEdit.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                showCommentPopup(v,getRef(position).getKey());
+                                showCommentPopup(v,getRef(holder.getAdapterPosition()).getKey());
                             }
                         });
                     }

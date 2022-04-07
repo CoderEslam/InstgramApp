@@ -600,7 +600,6 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         //STARTING PROFILE ACTIVITY..
 
-
                         Intent profile = new Intent(MainActivity.this, ProfileActivity.class);
                         profile.putExtra("UserKey", PostKey.substring(0, PostKey.indexOf('-') - 2));
                         Log.d("result", PostKey.substring(0, PostKey.indexOf('-')));
@@ -692,8 +691,7 @@ public class MainActivity extends AppCompatActivity {
                 // Create a new instance of the ViewHolder, in this case we are using a custom
                 // layout called R.layout.message for each item
 
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.all_post_layout, parent, false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.all_post_layout, parent, false);
                 return new PostViewHolder(view);
             }
         };
@@ -746,7 +744,7 @@ public class MainActivity extends AppCompatActivity {
             currentuserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
             CommentRef = FirebaseDatabase.getInstance().getReference().child("Posts");
             postcomment = mView.findViewById(R.id.postcomment);
-            //container = mView.findViewById(R.id.shimmer_view_container);
+//            container = mView.findViewById(R.id.shimmer_view_container);
 
         }
 
